@@ -1,96 +1,70 @@
-# InsightfulAI
+# InsightfulAI Project
 
-InsightfulAI is a comprehensive platform for collecting, analyzing, and reporting on market intelligence data. It helps businesses track competitors, monitor market trends, and make data-driven decisions.
+Welcome to the InsightfulAI project! This project consists of a backend API built with FastAPI and a frontend built with React and TypeScript.
 
-## Project Structure
+## Backend
 
-The project is organized into two main components:
-
-### Backend (API)
-
-- Built with Node.js, Express, and MongoDB
-- RESTful API architecture
-- JWT authentication
-- Modular structure for easy maintenance and scalability
-
-### Frontend
-
-- Built with React, TypeScript, and Material UI
-- Modern, responsive UI
-- Component-based architecture
-- State management with React Query
-
-## Features
-
-- **User Management**: Registration, authentication, and profile management
-- **Data Collection**: Gather data from various sources including social media, websites, and news
-- **Analysis**: Process and analyze collected data to extract insights
-- **Reports**: Generate customized reports based on analyzed data
-- **Competitor Tracking**: Monitor competitors' activities and market positioning
-
-## Getting Started
+The backend server is built using FastAPI and runs on Uvicorn.
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- MongoDB
-- npm or yarn
+Make sure you have Python 3.8+ installed along with pip. It is recommended to use a virtual environment.
 
-### Installation
+### Setup
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/insightfulai.git
-   cd insightfulai
+1. Install the necessary dependencies:
+   ```bash
+   pip install -r requirements.txt
    ```
 
-2. Install backend dependencies:
+2. (Optional) For development, it's a good idea to enable a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
    ```
-   cd backend
+
+### Running the Backend Server
+
+Navigate to the backend directory and run the following command:
+
+```bash
+cd backend
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+```
+
+- `main` is the name of the file (without the `.py` extension) where your FastAPI app instance is defined.
+- `app` is the name of the FastAPI instance.
+- The `--reload` flag enables auto-reloading on code changes during development.
+- The server will be available at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+## Frontend
+
+The frontend is built with React and TypeScript using Create React App.
+
+### Prerequisites
+
+Make sure you have Node.js and npm installed.
+
+### Setup
+
+1. Install the dependencies:
+   ```bash
    npm install
    ```
 
-3. Install frontend dependencies:
-   ```
-   cd ../frontend
-   npm install
-   ```
+### Running the Frontend
 
-4. Set up environment variables:
-   - Create a `.env` file in the backend directory
-   - Add the following variables:
-     ```
-     PORT=5000
-     MONGODB_URI=mongodb://localhost:27017/insightfulai
-     JWT_SECRET=your_jwt_secret
-     ```
-
-### Running the Application
-
-1. Start the backend server:
-   ```
-   cd backend
-   npm run dev
-   ```
-
-2. Start the frontend development server:
-   ```
+Start the development server with:
+   ```bash
    cd frontend
    npm start
    ```
 
-3. Access the application at `http://localhost:3000`
+This command launches the frontend in development mode and opens [http://localhost:3000](http://localhost:3000) in your default browser.
 
-## API Documentation
+## Additional Information
 
-The API documentation is available at `/api/docs` when the backend server is running.
+- For production deployment of the backend, consider running Uvicorn with additional performance options or using Gunicorn with Uvicorn workers.
+- Refer to each part's specific documentation for more detailed setup and configuration.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Material UI for the component library
-- Chart.js for data visualization
-- React Query for state management 
+Happy coding! 
