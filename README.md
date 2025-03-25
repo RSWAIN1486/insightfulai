@@ -1,10 +1,28 @@
 # InsightfulAI Project
 
-Welcome to the InsightfulAI project! This project consists of a backend API built with FastAPI and a frontend built with React and TypeScript.
+InsightfulAI is a comprehensive market intelligence platform designed to help businesses collect, analyze, and report on market data. The platform enables users to track competitors, monitor market trends, and make data-driven decisions through AI-powered analytics.
 
-## Backend
+## Key Features
 
-The backend server is built using FastAPI and runs on Uvicorn.
+- **Data Collection**: Automated gathering from multiple sources including social media, web content, and news articles
+- **Advanced Analytics**: 
+  - Sentiment Analysis
+  - Trend Detection
+  - Entity Extraction
+  - Topic Modeling
+- **Competitor Tracking**: Monitor competitor activities, products, and market positioning
+- **Interactive Dashboards**: Visualize market data and insights
+- **Customizable Reports**: Generate detailed market analysis reports
+
+## Technical Stack
+
+### Backend
+
+The backend server is built using FastAPI and runs on Uvicorn. It utilizes:
+- PostgreSQL for structured data
+- MongoDB for unstructured data
+- Redis for caching and task queuing
+- Celery for background task processing
 
 ### Prerequisites
 
@@ -65,6 +83,25 @@ This command launches the frontend in development mode and opens [http://localho
 ## Additional Information
 
 - For production deployment of the backend, consider running Uvicorn with additional performance options or using Gunicorn with Uvicorn workers.
-- Refer to each part's specific documentation for more detailed setup and configuration.
+- The platform requires various API keys for external services (Twitter, LinkedIn, etc.). Make sure to configure these in your environment.
+- For detailed API documentation, visit the `/docs` endpoint after starting the backend server.
+- The frontend includes responsive design and modern UI components using Material-UI.
+
+## Security Considerations
+
+- All API endpoints are protected with JWT authentication
+- Sensitive data is encrypted at rest
+- API rate limiting is implemented to prevent abuse
+- CORS is configured for secure frontend-backend communication
+
+## Getting Started
+
+1. Clone the repository
+2. Set up the backend dependencies and environment variables
+3. Set up the frontend dependencies
+4. Start both servers following the instructions above
+5. Visit the frontend application at http://localhost:3000
+
+For detailed setup instructions and configuration options, please refer to the documentation in the `docs` directory.
 
 Happy coding! 
