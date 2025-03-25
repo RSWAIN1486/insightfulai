@@ -14,6 +14,16 @@ InsightfulAI is a comprehensive market intelligence platform designed to help bu
 - **Interactive Dashboards**: Visualize market data and insights
 - **Customizable Reports**: Generate detailed market analysis reports
 
+## Demo
+Check out the demo video to see the application in action.
+
+
+
+https://github.com/user-attachments/assets/a7156e8d-8c10-47b5-9152-eee08c4d70ac
+
+
+
+
 ## Technical Stack
 
 ### Backend
